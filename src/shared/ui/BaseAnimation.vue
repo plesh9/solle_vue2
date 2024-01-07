@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
   props: {
@@ -13,21 +13,14 @@ export default defineComponent({
     },
     variant: {
       type: String,
-      default: 'slideDown',
+      default: "slideDown",
       validator: (value: string) =>
-        [
-          'slideDown',
-          'slideLeft',
-          'opacity',
-          'leafLeft',
-          'leaftRight',
-        ].includes(value),
+        ["slideDown", "slideLeft", "opacity", "leafLeft", "leaftRight"].includes(value),
     },
     visible: {
       type: String,
-      default: 'visibleOnce',
-      validator: (value: string) =>
-        ['visibleOnce', 'visible', 'enter'].includes(value),
+      default: "visibleOnce",
+      validator: (value: string) => ["visibleOnce", "visible", "enter"].includes(value),
     },
   },
   data() {
@@ -51,11 +44,14 @@ export default defineComponent({
         });
       },
       {
-        threshold: 0.125,
+        threshold: 0.2,
       }
     );
 
     this.observer.observe(this.$refs.observerRef);
+  },
+  destroyed() {
+    this.observer.disconnect();
   },
 });
 </script>
@@ -70,7 +66,7 @@ export default defineComponent({
   </div>
 </template>
 <style lang="scss" scoped>
-@import 'src/app/assets/styles/variables.scss';
+@import "src/app/assets/styles/variables.scss";
 
 .animate {
   opacity: 0;
