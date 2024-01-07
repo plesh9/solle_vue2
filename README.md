@@ -1,24 +1,15 @@
-# solle_vue2
+# Solle Vue 2.7.16
 
-## Project setup
-```
-yarn install
-```
+## Project Setup
 
-### Compiles and hot-reloads for development
-```
-yarn serve
+```sh
+npm install
 ```
 
-### Compiles and minifies for production
-```
-yarn build
+### Start the local server
+
+```sh
+npm run serve
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Open [http://localhost:8080/solle](http://localhost:8080/solle)
