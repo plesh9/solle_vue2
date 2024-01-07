@@ -3,10 +3,10 @@ import VuePlyr from 'vue-plyr';
 import { App } from './app';
 import i18n from './app/i18n';
 
-import 'vue-plyr/dist/vue-plyr.css';
-import './app/assets/styles/main.scss';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
+import 'vue-plyr/dist/vue-plyr.css';
+import './app/assets/styles/main.scss';
 
 Vue.config.productionTip = false;
 
